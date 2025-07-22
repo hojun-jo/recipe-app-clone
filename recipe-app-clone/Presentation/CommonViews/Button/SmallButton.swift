@@ -1,5 +1,5 @@
 //
-//  MediumButton.swift
+//  SmallButton.swift
 //  recipe-app-clone
 //
 //  Created by 조호준 on 7/22/25.
@@ -7,28 +7,26 @@
 
 import SwiftUI
 
-struct MediumButton: View {
+struct SmallButton: View {
     let text: String
     let onTap: () -> Void
     
     var body: some View {
         Button(action: onTap) {
-            HStack(alignment: .center, spacing: 9) {
+            HStack(alignment: .center) {
                 Text(text)
-                Image(systemName: "arrow.forward")
             }
-            .font(.normalTextBold)
+            .font(.smallerTextBold)
             .foregroundStyle(Color.white)
-            .frame(width: 243)
+            .frame(width: 114)
         }
-        .padding(.vertical, 15)
+        .padding(.vertical, 10)
         .background(Color.primary100)
         .cornerRadius(10)
     }
 }
 
 #Preview {
-    MediumButton(text: "Button") {
-        
-    }
+    SmallButton(text: "Button", onTap:  {
+    })
 }
